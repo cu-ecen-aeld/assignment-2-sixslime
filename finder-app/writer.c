@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <errno.h>
 #include <syslog.h>
 
 int main(int argc, char *argv[]) {
