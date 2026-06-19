@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <errno.h>
+#include <string.h>
 #include <syslog.h>
 
 int main(int argc, char *argv[]) {
@@ -11,7 +12,7 @@ int main(int argc, char *argv[]) {
 
     char* file_name = argv[1];
 
-    FILE *file_obj = fopen(filename, "w");
+    FILE *file_obj = fopen(file_name, "w");
 
     if (file_obj == NULL) {
         syslog(LOG_ERR, "Error opening file %s: %s\n", file_name, strerror( errno ));
